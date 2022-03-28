@@ -1,0 +1,1 @@
+# Configuracion de webpack con router de hash
