@@ -1,4 +1,5 @@
 @forward '../src/sass/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&family=Roboto&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,6 +11,8 @@ html {
   --blanco: #F1ECE7;
   --amarillo: #F2AA1F;
   --azul: #114358;
+  --title: 'Merriweather Sans', sans-serif;
+  --text:  'Roboto', sans-serif;
 }
 
 *,
