@@ -1,4 +1,4 @@
-import loadInicio from '../components/inicio/inicio';
+import { loadInicio } from '../components/inicio/inicio';
 import loadTemplates from '../utils/loadTemplates';
 
 const PATHS = [
