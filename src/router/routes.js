@@ -1,7 +1,8 @@
+import { loadDrinkMenu } from '../components/drinksMenu/drinksMenu';
 import { loadInicio } from '../components/inicio/inicio';
 import loadTemplates from '../utils/loadTemplates';
 
-const PATHS = [
+export const PATHS = [
   {
     path: '/',
     action: () => {
@@ -9,5 +10,13 @@ const PATHS = [
       loadInicio();
     },
   },
+  {
+    path: '/#drinkList',
+    action: () => {
+      loadTemplates();
+      loadDrinkMenu();
+
+    }
+  }
 ];
 export default PATHS;
