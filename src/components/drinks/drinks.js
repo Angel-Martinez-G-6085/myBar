@@ -22,9 +22,13 @@ export const createCard = async (nDrinks) => {
 
 // Distingue a cada por si mismo
 export const addButtonEvent = ({botones}) => {
-    const haceClick = function() {
-        console .log(this)
+    const haceClick = function(evemto) {
+        // Obtiene el id del trago
+        evemto.preventDefault();
+        const atributos = [...this.attributes];
+        const id = atributos[1].nodeValue;
     }
+
     botones.forEach(element => {
         element.addEventListener("click", haceClick);
     });
