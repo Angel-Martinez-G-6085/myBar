@@ -34,8 +34,8 @@
     "webpack-dev-server": "^4.6.0"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "dotenv": "^10.0.0",
-    "normalize.css": "^8.0.1",
-    "swiper": "^8.1.0"
+    "normalize.css": "^8.0.1"
   }
 }
