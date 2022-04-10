@@ -1,5 +1,6 @@
 import '../node_modules/normalize.css/normalize.css';
 import '../public/styles.scss';
+import './libs/changeImage';
 import Router from './router/router';
 import PATHS from './router/routes';
 
