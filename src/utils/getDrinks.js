@@ -30,8 +30,8 @@ export const setDrinkData = () => {
       card.children[0].setAttribute("src", `${response[index].strDrinkThumb}`);
       card.children[0].setAttribute("alt", `${response[index].strDrink}`);
       card.children[1].innerHTML = response[index].strDrink;
-      card.children[2].innerHTML = response[index].idDrink;
-      card.children[3].innerHTML = response[index].strInstructions;
+      card.children[2].innerHTML = response[index].strInstructions;
+      card.children[3].setAttribute("id", `${response[index].idDrink}`);
     });
   });
 };
