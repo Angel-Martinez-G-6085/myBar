@@ -13,18 +13,16 @@ const getDrink = async () => {
   }
 };
 
-const getDrinkArray = () => {
+const createDrinkArray = () => {
   let drinks = [];
-  for (let i = 0; i < 4; i++) {
-    const drink = getDrink();
-    drinks.push(drink);
-  }
+  const drink = getDrink();
+  drinks.push(drink);
   return Promise.all(drinks).then((response) => response);
 };
 
 export const setDrinkData = () => {
   let cards = document.querySelectorAll(".drink__card__content");
-  getDrinkArray().then((response) => {
+  createDrinkArray().then((response) => {
     cards = [...cards];
     cards.forEach((card, index) => {
       card.children[0].setAttribute("src", `${response[index].strDrinkThumb}`);
