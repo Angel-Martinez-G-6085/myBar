@@ -1,0 +1,25 @@
+@use "../../sass/mixins";
+
+.singleDrink__container {
+  width: 100%;
+  min-height: 100%;
+
+  .singleDrink__info {
+    margin: 1rem 2rem;
+  }
+
+  .single__title,
+  .single__id {
+    text-align: center;
+  }
+}
+
+.singleDrink__info {
+  @include mixins.mediaUp(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+  }
+}
