@@ -2,6 +2,7 @@ import './drinks.scss';
 import DRINK_CARD from './drinks.html';
 import DrinkListCard from './drinksList.html';
 import { setDrinkData } from '../../utils/getDrinks';
+import { loadSingleDrinkCard } from '../../utils/loadSingleDrinkCard';
 
 export const createCard = async (nDrinks) => {
     const slider = document.querySelector(".slider__container");
@@ -24,9 +25,9 @@ export const createCard = async (nDrinks) => {
 export const addButtonEvent = ({botones}) => {
     const haceClick = function(evemto) {
         // Obtiene el id del trago
-        evemto.preventDefault();
         const atributos = [...this.attributes];
         const id = atributos[1].nodeValue;
+        loadSingleDrinkCard(id);
     }
 
     botones.forEach(element => {
