@@ -1,15 +1,20 @@
 const axios = require("axios").default
 
 export const fetchIngridient = (ingredientes) => {
-    const ingridientsLink = [];
+    const ingridientsArray = [];
     try {
         ingredientes.forEach( async (ingrediente) => {
             const response = await axios.get(`https://thecocktaildb.com/images/ingredients/${ingrediente}-Medium.png`);
             const {config} = response;
             const imagen = config.url;
-            ingridientsLink.push(imagen);
+            const ingname = ingrediente;
+            const finalImgIngridient = {
+                ingname,
+                imagen
+            }
+            ingridientsArray.push(finalImgIngridient);
         });
-        return ingridientsLink;
+        return ingridientsArray;
     } catch (error) {
         console.log(error);
     }
