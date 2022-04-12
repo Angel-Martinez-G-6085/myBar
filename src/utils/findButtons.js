@@ -1,3 +1,5 @@
+import { loadSingleDrinkCard } from "./loadSingleDrinkCard";
+
 // Distingue a cada por si mismo
 export const findButtons = () => {
     let botones = document.querySelectorAll(".btn");
@@ -12,5 +14,5 @@ function evento(e){
     let atributos = this.attributes;
     atributos = [...atributos];
     id = atributos[1].nodeValue;
-    console.log(id);
+    loadSingleDrinkCard(id);
 }
