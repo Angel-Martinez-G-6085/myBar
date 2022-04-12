@@ -13,23 +13,28 @@ const getDrink = async () => {
   }
 };
 
-const createDrinkArray = () => {
+const createDrinkArray = async (numeroBebidas) => {
   let drinks = [];
-  const drink = getDrink();
-  drinks.push(drink);
-  return Promise.all(drinks).then((response) => response);
+  for (let i = 0; i < numeroBebidas; i++) {
+    const drink = await getDrink();
+    drinks.push(drink);
+  }
+  return drinks;
 };
 
-export const setDrinkData = () => {
-  let cards = document.querySelectorAll(".drink__card__content");
-  createDrinkArray().then((response) => {
-    cards = [...cards];
-    cards.forEach((card, index) => {
-      card.children[0].setAttribute("src", `${response[index].strDrinkThumb}`);
-      card.children[0].setAttribute("alt", `${response[index].strDrink}`);
-      card.children[1].innerHTML = response[index].strDrink;
-      card.children[2].innerHTML = response[index].strInstructions;
-      card.children[3].setAttribute("id", `${response[index].idDrink}`);
-    });
-  });
+export const DrinkData = async (numeroBebidas) => {
+  const drinkPromiseArray = await createDrinkArray(numeroBebidas);
+  return drinkPromiseArray;
 };
+
+export const setData = (dataArray) => {
+  let cards = document.querySelectorAll(".drink__card__content");
+  cards = [...cards];
+  const data = dataArray;
+  cards.forEach((card, index) => {
+    card.children[0].setAttribute("src", `${data[index].strDrinkThumb}`);
+    card.children[0].setAttribute("alt", `${data[index].strDrink}`);
+    card.children[1].innerHTML = data[index].strDrink;
+    card.children[2].innerHTML = data[index].strInstructions;
+  });
+}
