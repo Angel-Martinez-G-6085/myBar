@@ -27,7 +27,7 @@ export const DrinkData = async (numeroBebidas) => {
   return drinkPromiseArray;
 };
 
-export const setData = (dataArray) => {
+export const setData = async (dataArray) => {
   let cards = document.querySelectorAll(".drink__card__content");
   cards = [...cards];
   const data = dataArray;
