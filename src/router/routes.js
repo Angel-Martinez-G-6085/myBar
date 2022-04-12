@@ -17,6 +17,13 @@ export const PATHS = [
       loadTemplates();
       loadDrinkMenu();
     }
+  },
+  {
+    path: '/#singledrink',
+    action: () => {
+      loadTemplates();
+      loadSingleDrink();
+    }
   }
 ];
 export default PATHS;
