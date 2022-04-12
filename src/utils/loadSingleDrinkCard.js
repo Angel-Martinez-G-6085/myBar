@@ -2,7 +2,10 @@ const axios = require("axios").default;
 
 export const loadSingleDrinkCard = async (id) => {
     const datos = await fetchDrinkInfo(id);
+    const loading = document.querySelector(".carga");
     setDrinkInfo(datos);
+    // Se esconde el cargador
+    loading.style.display = "none";
 }
 
 const fetchDrinkInfo = async (id) => {
