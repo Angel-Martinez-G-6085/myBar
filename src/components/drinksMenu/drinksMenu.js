@@ -1,3 +1,4 @@
+import { findButtons } from "../../utils/findButtons";
 import { createCard } from "../drinks/drinks";
 import DrinkMenu from "./drinksMenu.html";
 
@@ -7,6 +8,7 @@ export const loadDrinkMenu = async () => {
 
   // Elimina la ultima tarjeta
   await createCard(12);
+  findButtons();
   let cards = document.querySelectorAll(".drink__card");
   cards = [...cards];
   const ultimo = cards[cards.length-1];
