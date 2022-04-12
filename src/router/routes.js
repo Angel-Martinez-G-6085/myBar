@@ -12,18 +12,10 @@ export const PATHS = [
     },
   },
   {
-    path: '/#drinkList',
+    path: '#/drinkMenu',
     action: () => {
       loadTemplates();
       loadDrinkMenu();
-
-    }
-  },
-  {
-    path: '/#singleDrink',
-    action: () => {
-      loadTemplates();
-      loadSingleDrink();
     }
   }
 ];
