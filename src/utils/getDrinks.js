@@ -36,5 +36,6 @@ export const setData = async (dataArray) => {
     card.children[0].setAttribute("alt", `${data[index].strDrink}`);
     card.children[1].innerHTML = data[index].strDrink;
     card.children[2].innerHTML = data[index].strInstructions;
+    card.children[3].setAttribute("id", data[index].idDrink);
   });
 }
