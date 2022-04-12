@@ -2,7 +2,6 @@ const axios = require("axios").default;
 
 export const loadSingleDrinkCard = async (id) => {
     const datos = await fetchDrinkInfo(id);
-    const {ingredientes} = datos;
     setDrinkInfo(datos);
 }
 
