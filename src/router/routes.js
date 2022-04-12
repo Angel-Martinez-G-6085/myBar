@@ -12,6 +12,13 @@ export const PATHS = [
     },
   },
   {
+    path: '#/',
+    action: () => {
+      loadTemplates();
+      loadInicio();
+    }
+  },
+  {
     path: '#/drinkMenu',
     action: () => {
       loadTemplates();
